@@ -1,0 +1,29 @@
+{
+  "name": "is-query-valid",
+  "version": "0.0.0",
+  "description": "Performs sql query validation on field/variable list",
+  "main": "index.js",
+  "scripts": {
+    "test": "tape test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Balou9/is-query-valid.git"
+  },
+  "keywords": [
+    "query",
+    "validation",
+    "field",
+    "variable",
+    "validator"
+  ],
+  "author": "Emmanuel Owosekun",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Balou9/is-query-valid/issues"
+  },
+  "homepage": "https://github.com/Balou9/is-query-valid#readme",
+  "devDependencies": {
+    "tape": "^4.10.1"
+  }
+}
