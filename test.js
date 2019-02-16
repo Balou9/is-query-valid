@@ -24,6 +24,8 @@ tape('isQueryValid - brackets query - true', function (t) {
 tape('isQueryValid - double quoted query - true', function (t) {
   fs.readFile(doubleQuotedFile, function (err, data) {
     if (err) t.end(err)
+    data = data.toString()
+//  console.log(JSON.parse(data).data)
     console.log(data)
     t.true(isQueryValid(data))
     t.end()
