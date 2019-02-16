@@ -5,11 +5,11 @@ var bracketsFile = './brackets.txt'
 var doubleQuotedFile = './dq.txt'
 var someFile = './some.txt'
 
-tape('isQueryValid - str - true', function (t) {
+tape.only('isQueryValid - str - true', function (t) {
   t.true(isQueryValid('[Mikey]'), 'single brackets true')
-  t.true(isQueryValid(['[Mikey]', ',[Rondo]']), 'multi brackets true')
+  t.true(isQueryValid(['[Mikey]\r\n,[Rondo]']), 'multi brackets true')
   t.true(isQueryValid('"Mikey"'), 'single double quotes true')
-  t.true(isQueryValid(['"Mikey"', ',"Rondo"']), 'multi double quotes true')
+  t.true(isQueryValid(['"Mikey"\r\n,"Rondo"']), 'multi double quotes true')
   t.end()
 })
 
