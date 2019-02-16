@@ -1,5 +1,5 @@
 function isQueryValid (str) {
-  return /[^\".*\"$]||^\[.*\]$/s.test(str)
+  return /^\,?\[\w*\]$||^\,?\"\w*\"$/.test(str)
 }
 
 module.exports = isQueryValid
