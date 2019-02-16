@@ -7,9 +7,9 @@ var someFile = './some.txt'
 
 tape.only('isQueryValid - str - true', function (t) {
   t.true(isQueryValid('[Mikey]'), 'single brackets true')
-  t.true(isQueryValid(['[Mikey]\r\n,[Rondo]']), 'multi brackets true')
+  t.true(isQueryValid(['[Mikey]\r\n,[Rondo]\r\n,[419]']), 'multi brackets true')
   t.true(isQueryValid('"Mikey"'), 'single double quotes true')
-  t.true(isQueryValid(['"Mikey"\r\n,"Rondo"']), 'multi double quotes true')
+  t.true(isQueryValid(['"Mikey"\r\n,"Rondo"\r\n,"419"']), 'multi double quotes true')
   t.end()
 })
 
