@@ -1,7 +1,7 @@
 {
   "name": "is-query-valid",
   "version": "0.0.0",
-  "description": "Performs sql query validation on field/variable list",
+  "description": "Performs query validation on field/variable list",
   "main": "index.js",
   "scripts": {
     "test": "tape test.js"
