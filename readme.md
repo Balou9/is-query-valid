@@ -5,6 +5,12 @@
 Performs query validation on field/variable list formatting.  
 Validation includes brackets and double quotes
 
+## API
+###`isQueryValid(str, cb)`   
+
+str: string  
+cb: error first callback
+
 ## License
 
 [MIT](./license.md)
