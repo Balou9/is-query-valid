@@ -1,3 +1,4 @@
-module.exports = isQueryValid = (str, cb) => {
-  cb(null, /(^(\[\w*\]\n){1}(\,\[\w*\]\n)*$)|(^(\"\w*\"\n){1}(\,\"\w*\"\n)*$)/.test(str))
+module.exports = isQueryValid = (arr) => {
+  var isValid = (cur) => cur === true
+  return arr.map(each => /^(\,)?[\[\"]\w*[\]\"]$/.test(each)).every(isValid)
 }

@@ -4,7 +4,7 @@
 
 ***
 
-Performs query validation on field/variable list formatting.  
+Performs query validation on field/variable list.  
 Validation includes brackets and double quotes
 
 ***
@@ -19,22 +19,20 @@ npm install --save is-query-valid
 ## Usage
 ```js
 var isQueryValid = require('is-query-valid')
-var fs = require('fs')
+var arr = ['[absolutely]', ',[everybody]', ',[is]', ',[free]']
 
-fs.readFile('./lib/b2.txt', (err, isTrue) => {
-  if (err) throw err
-  console.log('Query validation is ' + data)
-})
-
+console.log(isQueryValid(arr))
+// true
 ```
 
 ## API
-### `isQueryValid(str, cb)`   
+### `isQueryValid(arr)`   
 
-str: string  
-cb: error first callback
+`arr` string array
 
-Returns true if input string contains brackets or double quoted queries
+Returns `true` if each matches query formatting rule and `false` if not  
+
+**Rule**: Any word is enclosed by double quotation marks or opening and closing brackets.
 
 ## License
 

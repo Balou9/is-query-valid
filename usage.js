@@ -1,16 +1,8 @@
-var fs = require('fs')
 var isQueryValid = require('./index.js')
 var sample = require('./lib/sample.js')
 
-isQueryValid(sample.bracketsMulti, (err, data) => {
-  if (err) throw err
-  console.log(data)
-})
-
-fs.readFile('./lib/b2.txt', (err, data) => {
-  if (err) throw err
-  isQueryValid(data, (err, query) => {
-    if (err) throw err
-    console.log(query)
-  })
-})
+console.log(sample.brackets, isQueryValid(sample.brackets))
+console.log(sample.brackets2, isQueryValid(sample.brackets2))
+console.log(sample.doubleQuote, isQueryValid(sample.doubleQuote))
+console.log(sample.doubleQuote2, isQueryValid(sample.doubleQuote2))
+console.log(sample.someMix, isQueryValid(sample.someMix))
