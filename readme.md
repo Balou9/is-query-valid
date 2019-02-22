@@ -21,8 +21,11 @@ npm install --save is-query-valid
 var isQueryValid = require('is-query-valid')
 var arr = ['[absolutely]', ',[everybody]', ',[is]', ',[free]']
 
-console.log(isQueryValid(arr))
-// true
+isQueryValid(arr, (err, isTrue) => {
+  if (err) throw err
+  console.log('Query Validator returns', isTrue)
+})
+// Query Validator returns true
 ```
 
 ## API

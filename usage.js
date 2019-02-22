@@ -1,8 +1,27 @@
 var isQueryValid = require('./index.js')
 var sample = require('./lib/sample.js')
 
-console.log(sample.brackets, isQueryValid(sample.brackets))
-console.log(sample.brackets2, isQueryValid(sample.brackets2))
-console.log(sample.doubleQuote, isQueryValid(sample.doubleQuote))
-console.log(sample.doubleQuote2, isQueryValid(sample.doubleQuote2))
-console.log(sample.someMix, isQueryValid(sample.someMix))
+isQueryValid(sample.brackets, (err, isTrue) => {
+  if (err) throw err
+  console.log('Query Validator returns', isTrue)
+})
+
+isQueryValid(sample.brackets2, (err, isTrue) => {
+  if (err) throw err
+  console.log('Query Validator returns', isTrue)
+})
+
+isQueryValid(sample.doubleQuote, (err, isTrue) => {
+  if (err) throw err
+  console.log('Query Validator returns', isTrue)
+})
+
+isQueryValid(sample.doubleQuote2, (err, isTrue) => {
+  if (err) throw err
+  console.log('Query Validator returns', isTrue)
+})
+
+isQueryValid(sample.someMix, (err, isFalse) => {
+  if (err) throw err
+  console.log('Query Validator returns', isFalse)
+})

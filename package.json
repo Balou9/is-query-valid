@@ -1,6 +1,6 @@
 {
   "name": "is-query-valid",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Performs query validation on field/variable list",
   "main": "index.js",
   "scripts": {

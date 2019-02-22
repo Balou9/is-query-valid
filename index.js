@@ -1,4 +1,4 @@
-module.exports = isQueryValid = (arr) => {
+module.exports = isQueryValid = (arr, cb) => {
   var isValid = (cur) => cur === true
-  return arr.map(each => /^(\,)?[\[\"]\w*[\]\"]$/.test(each)).every(isValid)
+  cb(null, arr.map(each => /^(\,)?[\[\"]\w*[\]\"]$/.test(each)).every(isValid))
 }
